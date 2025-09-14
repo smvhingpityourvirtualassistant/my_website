@@ -3,103 +3,66 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Masterpiece Website</title>
+  <title>SMVHingpit - Company Portal</title>
   <style>
     body {
+      margin: 0;
       font-family: Arial, sans-serif;
-      margin: 0;
-      min-height: 100vh;
-      background: url("https://drive.google.com/uc?export=view&id=1ikKSxi258zHVhYCD8SAHf3aUEa3Y5hHd") no-repeat center center fixed;
+      color: white;
+      text-align: center;
+      background: url('background.jpg') no-repeat center center fixed;
       background-size: cover;
-      color: #fff;
     }
-
     header {
-      background: rgba(0, 123, 255, 0.8);
-      color: white;
-      padding: 40px 20px;
-      text-align: center;
-    }
-
-    header h1 {
-      margin: 0;
-      font-size: 2.5rem;
-    }
-
-    header p {
-      margin: 10px 0 0;
-      font-size: 1.2rem;
-    }
-
-    nav {
-      background: rgba(51, 51, 51, 0.85);
-      padding: 15px;
-      text-align: center;
-    }
-
-    nav a {
-      color: white;
-      margin: 0 15px;
-      text-decoration: none;
+      background: rgba(0, 0, 0, 0.6);
+      padding: 20px;
+      font-size: 24px;
       font-weight: bold;
-      transition: color 0.3s;
     }
-
-    nav a:hover {
-      color: #ffcc00;
+    main {
+      margin-top: 100px;
     }
-
-    .content {
-      padding: 20px;
-      background: rgba(51, 51, 51, 0.85);
-      margin: 30px auto;
-      max-width: 900px;
-      border-radius: 10px;
-      box-shadow: 0px 4px 12px rgba(0,0,0,0.3);
+    .button {
+      padding: 15px 30px;
+      background: #007bff;
+      color: white;
+      font-size: 18px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      margin-top: 20px;
     }
-
-    .content h2 {
-      color: #ffcc00;
+    .button:hover {
+      background: #0056b3;
     }
-
     footer {
-      text-align: center;
-      padding: 20px;
-      background: rgba(51, 51, 51, 0.85);
-      margin-top: 40px;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.6);
+      padding: 10px;
+      font-size: 14px;
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>Welcome to My Masterpiece</h1>
-    <p>This is my very first website 🎉</p>
+    Welcome to SMVHingpit Company Portal
   </header>
 
-  <nav>
-    <a href="#about">About</a>
-    <a href="#gallery">Gallery</a>
-    <a href="#contact">Contact</a>
-  </nav>
+  <main>
+    <h1>📢 Announcements & Updates</h1>
+    <p>Welcome to the official portal of SMVHingpit.  
+       Stay updated with the latest news and access your payroll securely.</p>
 
-  <div class="content" id="about">
-    <h2>About Me</h2>
-    <p>Hello! 👋 My name is <b>SMVH</b>, please call me <b>Steff</b> and this is the start of my journey in web design.  
-    This website is my masterpiece project created with the guidance of my friend 😍, A friend promised not to leave me behind..</p>
-  </div>
-
-  <div class="content" id="gallery">
-    <h2>Gallery</h2>
-    <p>Here’s where I’ll put some cool pictures and ideas in the future 🖼️✨.</p>
-  </div>
-
-  <div class="content" id="contact">
-    <h2>Contact</h2>
-    <p>You can reach me at: <b>stephanyhingpittheexecutiveva@gmail.com</b></p>
-  </div>
+    <!-- Payroll Login Button -->
+    <a href="YOUR_APPS_SCRIPT_WEB_APP_URL" target="_blank">
+      <button class="button">Employee Payroll Login</button>
+    </a>
+  </main>
 
   <footer>
-    <p>© 2025 My Masterpiece | Built with ❤️</p>
+    &copy; 2025 SMVHingpit. All rights reserved.
   </footer>
 </body>
 </html>
