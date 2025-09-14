@@ -3,82 +3,99 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title> SMVHingpit Home Space </title>
+  <title>SMVHingpit Portal</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
-      color: white;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to right, #007BFF, #00C6FF);
+      color: #fff;
       text-align: center;
-      background: url('background.jpg') no-repeat center center fixed;
-      background-size: cover;
     }
+
     header {
-      background: rgba(0, 0, 0, 0.6);
+      padding: 30px 20px;
+      font-size: 1.5rem;
+      font-weight: 600;
+      background: rgba(0, 0, 0, 0.3);
+      backdrop-filter: blur(6px);
+    }
+
+    .hero {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 80vh;
       padding: 20px;
-      font-size: 26px;
-      font-weight: bold;
     }
-    main {
-      margin-top: 100px;
+
+    .hero h1 {
+      font-size: 2.5rem;
+      text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
     }
-    h1 {
-      font-size: 36px;
-      text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
+
+    .hero p {
+      max-width: 700px;
+      margin: 15px auto;
+      font-size: 1.2rem;
+      line-height: 1.6;
     }
-    p {
-      font-size: 18px;
-      max-width: 600px;
-      margin: auto;
-      background: rgba(0,0,0,0.5);
-      padding: 15px;
-      border-radius: 8px;
+
+    .card {
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 12px;
+      padding: 25px;
+      margin-top: 20px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
     }
-    .button {
-      padding: 15px 30px;
-      background: #007bff;
-      color: white;
-      font-size: 18px;
+
+    .btn {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 12px 25px;
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: #fff;
+      background: #ff9800;
       border: none;
       border-radius: 8px;
-      cursor: pointer;
-      margin-top: 20px;
-      box-shadow: 2px 2px 6px rgba(0,0,0,0.4);
+      text-decoration: none;
+      transition: all 0.3s ease;
     }
-    .button:hover {
-      background: #0056b3;
+
+    .btn:hover {
+      background: #e68900;
+      transform: scale(1.05);
     }
+
     footer {
-      position: fixed;
-      bottom: 0;
-      width: 100%;
-      background: rgba(0, 0, 0, 0.6);
-      padding: 10px;
-      font-size: 14px;
+      background: rgba(0,0,0,0.3);
+      padding: 15px;
+      margin-top: 30px;
+      font-size: 0.9rem;
     }
   </style>
 </head>
 <body>
-  <header>
-    SMVHingpit Portal
-  </header>
 
-  <main>
-    <h1>📢 Welcome to our space! We are excited  to share what we do and help you find exactly what you're looking for, Dive in and see what awaits!.</h1>
-    <p>
-      This is the official my Official Home Space of SMVHingpit.  
-      Here you can check announcements and securely access your personal DATO's.
-    </p>
+  <header>SMVHingpit Portal</header>
 
-    <!-- Payroll Login Button -->
-    <a href="YOUR_APPS_SCRIPT_WEB_APP_URL" target="_blank">
-      <button class="button">🔑 COS Dashboard Login</button>
-    </a>
-  </main>
+  <section class="hero">
+    <h1>Welcome everyone!</h1>
+    <p>We are excited to share what we do and help you find exactly what you're looking for✨.</p>
+
+    <div class="card">
+      <p>This is our official Home Space Built with ❤️ <b>SMVHingpit</b>.  
+      Here you can check announcements and securely access your personal DATO's.</p>
+      <a href="#" class="btn">🔑 COS Dashboard Login</a>
+    </div>
+  </section>
 
   <footer>
-    &copy; 2025 SMVH Masterpiece | Built with ❤️. All rights reserved.
+    © 2025 SMVH Masterpiece. All rights reserved.
   </footer>
+
 </body>
 </html>
-
