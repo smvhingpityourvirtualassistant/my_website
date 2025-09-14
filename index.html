@@ -9,7 +9,12 @@
     body {
       margin: 0;
       font-family: 'Poppins', sans-serif;
-      background: linear-gradient(to right, #007BFF, #00C6FF);
+      min-height: 100vh;
+      background: 
+        linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), 
+        url("https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1600&q=80") 
+        no-repeat center center fixed;
+      background-size: cover;
       color: #fff;
       text-align: center;
     }
@@ -18,7 +23,7 @@
       padding: 30px 20px;
       font-size: 1.5rem;
       font-weight: 600;
-      background: rgba(0, 0, 0, 0.3);
+      background: rgba(0, 0, 0, 0.5);
       backdrop-filter: blur(6px);
     }
 
@@ -32,8 +37,8 @@
     }
 
     .hero h1 {
-      font-size: 2.5rem;
-      text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
+      font-size: 2.8rem;
+      text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
     }
 
     .hero p {
@@ -41,24 +46,26 @@
       margin: 15px auto;
       font-size: 1.2rem;
       line-height: 1.6;
+      text-shadow: 1px 1px 5px rgba(0,0,0,0.6);
     }
 
     .card {
-      background: rgba(255, 255, 255, 0.1);
+      background: rgba(255, 255, 255, 0.15);
       border-radius: 12px;
       padding: 25px;
       margin-top: 20px;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+      backdrop-filter: blur(8px);
     }
 
     .btn {
       display: inline-block;
-      margin-top: 20px;
+      margin: 10px;
       padding: 12px 25px;
       font-size: 1.1rem;
       font-weight: 600;
       color: #fff;
-      background: #ff9800;
+      background: #4CAF50;
       border: none;
       border-radius: 8px;
       text-decoration: none;
@@ -66,12 +73,12 @@
     }
 
     .btn:hover {
-      background: #e68900;
+      background: #45a049;
       transform: scale(1.05);
     }
 
     footer {
-      background: rgba(0,0,0,0.3);
+      background: rgba(0,0,0,0.5);
       padding: 15px;
       margin-top: 30px;
       font-size: 0.9rem;
@@ -80,16 +87,21 @@
 </head>
 <body>
 
-  <header>SMVHingpit Portal</header>
+  <header>SMVH Portal</header>
 
   <section class="hero">
-    <h1>Welcome everyone!</h1>
-    <p>We are excited to share what we do and help you find exactly what you're looking for✨.</p>
+    <h1>Welcome to my Space!</h1>
+    <p>We are excited to share what we do and help you find exactly what you're looking for.  
+    Let's dive in and see what awaits ✨.</p>
 
     <div class="card">
-      <p>This is our official Home Space Built with ❤️ <b>SMVHingpit</b>.  
+      <p>This is my space that I built with Love  <b>❤️SMVHingpit❤️</b>.  
       Here you can check announcements and securely access your personal DATO's.</p>
-      <a href="#" class="btn">🔑 COS Dashboard Login</a>
+
+      <!-- Buttons -->
+      <a href="YOUR_COS_DASHBOARD_URL" class="btn">🔑 COS Dashboard Login</a>
+      <a href="YOUR_MLBUSINESS_URL" class="btn">📊 ML Business Login</a>
+      <a href="YOUR_COM&BEN_DASHBAORD_URL" class="btn">📊 COM&BEN Dashbaord Login</a>
     </div>
   </section>
 
