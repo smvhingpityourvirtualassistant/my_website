@@ -21,60 +21,23 @@
 
     header {
       padding: 30px 20px;
-      font-size: 1.5rem;
+      font-size: 1.8rem;
       font-weight: 600;
       background: rgba(0, 0, 0, 0.5);
-      backdrop-filter: blur(6px);
     }
 
-    .hero {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      min-height: 80vh;
-      padding: 20px;
+    section {
+      padding: 40px 20px;
+      max-width: 900px;
+      margin: auto;
     }
 
-    .hero h1 {
-      font-size: 2.8rem;
-      text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+    h2 {
+      color: #ffcc00;
     }
 
-    .hero p {
-      max-width: 700px;
-      margin: 15px auto;
-      font-size: 1.2rem;
+    p {
       line-height: 1.6;
-      text-shadow: 1px 1px 5px rgba(0,0,0,0.6);
-    }
-
-    .card {
-      background: rgba(255, 255, 255, 0.15);
-      border-radius: 12px;
-      padding: 25px;
-      margin-top: 20px;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.4);
-      backdrop-filter: blur(8px);
-    }
-
-    .btn {
-      display: inline-block;
-      margin: 10px;
-      padding: 12px 25px;
-      font-size: 1.1rem;
-      font-weight: 600;
-      color: #fff;
-      background: #4CAF50;
-      border: none;
-      border-radius: 8px;
-      text-decoration: none;
-      transition: all 0.3s ease;
-    }
-
-    .btn:hover {
-      background: #45a049;
-      transform: scale(1.05);
     }
 
     footer {
@@ -83,33 +46,94 @@
       margin-top: 30px;
       font-size: 0.9rem;
     }
+
+    /* Floating secret button */
+    .secret-btn {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #ff9800;
+      color: #fff;
+      border: none;
+      padding: 15px;
+      border-radius: 50%;
+      cursor: pointer;
+      font-size: 1.2rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+      transition: transform 0.3s;
+    }
+
+    .secret-btn:hover {
+      transform: scale(1.1);
+    }
+
+    /* Hidden menu */
+    .hidden-menu {
+      display: none;
+      position: fixed;
+      bottom: 70px;
+      right: 20px;
+      background: rgba(0,0,0,0.8);
+      border-radius: 12px;
+      padding: 15px;
+      text-align: left;
+    }
+
+    .hidden-menu a {
+      display: block;
+      color: #fff;
+      padding: 8px 0;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .hidden-menu a:hover {
+      color: #ffcc00;
+    }
   </style>
 </head>
 <body>
 
-  <header>SMVH Portal</header>
+  <header>🌿 Welcome to SMVHingpit</header>
 
-  <section class="hero">
-    <h1>Welcome to my Space!</h1>
-    <p>We are excited to share what we do and help you find exactly what you're looking for.  
-    Let's dive in and see what awaits.</p>
+  <section id="about">
+    <h2>About Me</h2>
+    <p>Hello 👋, I’m <b>Steff</b>. This is my masterpiece website, built with creativity, passion, and positivity.  
+    I believe in making tools and systems that help people, while also sharing joy and inspiration 🌸.</p>
+  </section>
 
-    <div class="card">
-      <p>This is my space that I built with Love  <b>❤️SMVHingpit❤️</b>.  
-      Here you can check announcements and securely access your personal DATO's.</p>
+  <section id="business">
+    <h2>Our Business</h2>
+    <p>We specialize in Payroll Systems, ML Business, and Com&Ben Dashboard.  
+    Our goal is to empower employees, create efficiency, and build trust.</p>
+  </section>
 
-      <!-- Buttons -->
-      <a href="https://script.google.com/macros/s/AKfycbxO3gp9zCAbeCrvrfAPjKZ1xWl4_RkRPDg1dDmTYStP/dev" class="btn">🔑 COS Dashboard Login</a>
-      <a href="https://script.google.com/macros/s/AKfycbwoYoWw_ENZyzRl-rNdnjrVqLaWRUqrHSBehyeihws/dev" class="btn">📊 F@ML Business Login</a>
-      <a href="YOUR_COMBEN_URL" class="btn">📂 Com&Ben Dashboard</a>
-
+  <section id="passion">
+    <h2>Passions</h2>
+    <p>I am passionate about growth 🌱, creativity 🎨, and positivity ☀️.  
+    This website is not just technology, it’s a journey of learning and sharing 💖.</p>
   </section>
 
   <footer>
-    © 2025 SMVH Masterpiece. All rights reserved.
+    © 2025 SMVH Masterpiece | Built with ❤️ by Steff
   </footer>
+
+  <!-- Secret Button -->
+  <button class="secret-btn" onclick="toggleMenu()">🔑</button>
+
+  <!-- Hidden Menu -->
+  <div class="hidden-menu" id="menu">
+    <a href="YOUR_COS_DASHBOARD_URL">🔑 COS Dashboard</a>
+    <a href="YOUR_MLBUSINESS_URL">📊 ML Business</a>
+    <a href="YOUR_COMBEN_URL">📂 Com&Ben Dashboard</a>
+  </div>
+
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById("menu");
+      menu.style.display = menu.style.display === "block" ? "none" : "block";
+    }
+  </script>
 
 </body>
 </html>
-
-
