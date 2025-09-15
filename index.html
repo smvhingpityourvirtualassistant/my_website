@@ -8,145 +8,162 @@
     body {
       margin: 0;
       font-family: "Segoe UI", Arial, sans-serif;
-      min-height: 100vh;
+      color: #333;
+    }
+
+    /* Navigation Bar */
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 50px;
+      position: absolute;
+      width: 100%;
+      top: 0;
+      left: 0;
+      z-index: 1000;
+    }
+
+    nav .logo {
+      font-size: 20px;
+      font-weight: bold;
+      letter-spacing: 2px;
+      color: white;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 25px;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      font-size: 14px;
+      color: white;
+      transition: color 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: #ffd6d6;
+    }
+
+    /* Hero Section */
+    .hero {
+      height: 100vh;
       background: linear-gradient(135deg, #a8edea, #fed6e3);
       display: flex;
       flex-direction: column;
-      color: #333;
-    }
-
-    header {
+      justify-content: center;
+      align-items: center;
       text-align: center;
-      padding: 40px 20px 20px;
+      padding: 0 20px;
     }
 
-    header img {
-      width: 120px;
-      height: 120px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 4px solid white;
-      box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+    .hero h1 {
+      font-size: 4rem;
+      font-weight: bold;
+      margin: 10px 0;
+      color: #fff;
     }
 
-    header h1 {
-      margin: 15px 0 5px;
-      font-size: 2rem;
-      color: #222;
+    .hero p {
+      font-size: 1.2rem;
+      color: #fff;
+      max-width: 600px;
     }
 
-    header p {
-      margin: 0;
-      font-size: 1rem;
-      color: #555;
-    }
-
-    .content {
-      background: rgba(255, 255, 255, 0.8);
-      margin: 20px auto;
-      max-width: 800px;
-      padding: 20px;
-      border-radius: 12px;
-      box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
-    }
-
-    .content h2 {
-      color: #444;
-    }
-
-    /* Hidden corner button (menu) */
-    .menu-btn {
-      position: fixed;
-      top: 20px;
-      right: 20px;
-      background: #444;
-      color: white;
+    .hero button {
+      margin-top: 20px;
+      padding: 14px 30px;
+      font-size: 14px;
+      font-weight: bold;
       border: none;
-      border-radius: 50%;
-      width: 50px;
-      height: 50px;
-      font-size: 24px;
+      border-radius: 4px;
+      background: #222;
+      color: #fff;
       cursor: pointer;
-      box-shadow: 0px 4px 8px rgba(0,0,0,0.3);
-    }
-
-    .menu {
-      position: fixed;
-      top: 80px;
-      right: 20px;
-      background: white;
-      border-radius: 10px;
-      box-shadow: 0px 4px 12px rgba(0,0,0,0.2);
-      display: none;
-      flex-direction: column;
-    }
-
-    .menu a {
-      padding: 12px 20px;
-      text-decoration: none;
-      color: #333;
-      border-bottom: 1px solid #eee;
       transition: background 0.3s;
     }
 
-    .menu a:hover {
-      background: #f0f0f0;
+    .hero button:hover {
+      background: #444;
+    }
+
+    /* Content Section */
+    .section {
+      padding: 60px 20px;
+      text-align: center;
+      background: #f9f9f9;
+    }
+
+    .section h2 {
+      font-size: 2rem;
+      margin-bottom: 15px;
+    }
+
+    .section p {
+      max-width: 700px;
+      margin: 0 auto;
+      font-size: 1rem;
+      color: #555;
     }
 
     footer {
       text-align: center;
       padding: 20px;
       font-size: 0.9rem;
-      color: #444;
-      margin-top: auto;
+      background: #f5f5f5;
+      color: #555;
     }
   </style>
 </head>
 <body>
-  <!-- Corner menu button -->
-  <button class="menu-btn" onclick="toggleMenu()">☰</button>
-  <div class="menu" id="menu">
-    <a href="#about">About Me</a>
-    <a href="#business">My Business</a>
-    <a href="#passion">Passion Projects</a>
-    <a href="#contact">Contact</a>
+  <!-- Navigation -->
+  <nav>
+    <div class="logo">STEFF</div>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#business">Business</a></li>
+      <li><a href="#passion">Passion</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+  <div class="hero">
+    <h1>STEFF</h1>
+    <p>Beautiful space to share my story, my business, and the passions I care about most.</p>
+    <button onclick="document.getElementById('about').scrollIntoView({behavior:'smooth'})">
+      DISCOVER MORE
+    </button>
   </div>
 
-  <header>
-    <img src="A_professional_digital_portrait_photograph_feature.png" alt="Steff">
-    <h1>Hello, I'm Steff</h1>
-    <p>Executive VA | Businesswoman | Creator</p>
-  </header>
-
-  <div class="content" id="about">
+  <!-- Sections -->
+  <div class="section" id="about">
     <h2>About Me</h2>
     <p>Hi 👋 I’m Steff, a passionate individual who loves creating meaningful work, balancing professionalism with creativity. This page is where I share my journey and the things I love.</p>
   </div>
 
-  <div class="content" id="business">
+  <div class="section" id="business" style="background:white;">
     <h2>My Business</h2>
     <p>Welcome to my business space 🌱. Here, I focus on helping clients grow through efficiency, creativity, and dedication. Soon, you’ll find access to my dashboards and tools.</p>
   </div>
 
-  <div class="content" id="passion">
+  <div class="section" id="passion">
     <h2>Passion Projects</h2>
     <p>I enjoy exploring new skills, learning continuously, and creating projects that inspire positivity and growth. ✨</p>
   </div>
 
-  <div class="content" id="contact">
+  <div class="section" id="contact" style="background:white;">
     <h2>Contact</h2>
     <p>Email me at: <b>stephanyhingpittheexecutiveva@gmail.com</b></p>
   </div>
 
   <footer>
-    <p>© 2025 Steff's Masterpiece | Built with ❤️ and creativity</p>
+    <p>© 2025 Steff's Masterpiece | Built with ❤️</p>
   </footer>
-
-  <script>
-    function toggleMenu() {
-      const menu = document.getElementById("menu");
-      menu.style.display = menu.style.display === "flex" ? "none" : "flex";
-    }
-  </script>
 </body>
 </html>
