@@ -3,140 +3,150 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SMVH Portal</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <title>Steff's Masterpiece</title>
   <style>
     body {
       margin: 0;
-      font-family: 'Poppins', sans-serif;
+      font-family: "Segoe UI", Arial, sans-serif;
       min-height: 100vh;
-      background: 
-        linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), 
-        url("https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1600&q=80") 
-        no-repeat center center fixed;
-      background-size: cover;
-      color: #fff;
-      text-align: center;
+      background: linear-gradient(135deg, #a8edea, #fed6e3);
+      display: flex;
+      flex-direction: column;
+      color: #333;
     }
 
     header {
-      padding: 30px 20px;
-      font-size: 1.8rem;
-      font-weight: 600;
-      background: rgba(0, 0, 0, 0.5);
+      text-align: center;
+      padding: 40px 20px 20px;
     }
 
-    section {
-      padding: 40px 20px;
-      max-width: 900px;
-      margin: auto;
+    header img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid white;
+      box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
     }
 
-    h2 {
-      color: #ffcc00;
+    header h1 {
+      margin: 15px 0 5px;
+      font-size: 2rem;
+      color: #222;
     }
 
-    p {
-      line-height: 1.6;
+    header p {
+      margin: 0;
+      font-size: 1rem;
+      color: #555;
+    }
+
+    .content {
+      background: rgba(255, 255, 255, 0.8);
+      margin: 20px auto;
+      max-width: 800px;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .content h2 {
+      color: #444;
+    }
+
+    /* Hidden corner button (menu) */
+    .menu-btn {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background: #444;
+      color: white;
+      border: none;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      font-size: 24px;
+      cursor: pointer;
+      box-shadow: 0px 4px 8px rgba(0,0,0,0.3);
+    }
+
+    .menu {
+      position: fixed;
+      top: 80px;
+      right: 20px;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0px 4px 12px rgba(0,0,0,0.2);
+      display: none;
+      flex-direction: column;
+    }
+
+    .menu a {
+      padding: 12px 20px;
+      text-decoration: none;
+      color: #333;
+      border-bottom: 1px solid #eee;
+      transition: background 0.3s;
+    }
+
+    .menu a:hover {
+      background: #f0f0f0;
     }
 
     footer {
-      background: rgba(0,0,0,0.5);
-      padding: 15px;
-      margin-top: 30px;
+      text-align: center;
+      padding: 20px;
       font-size: 0.9rem;
-    }
-
-    /* Floating secret button */
-    .secret-btn {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background: #ff9800;
-      color: #fff;
-      border: none;
-      padding: 15px;
-      border-radius: 50%;
-      cursor: pointer;
-      font-size: 1.2rem;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.4);
-      transition: transform 0.3s;
-    }
-
-    .secret-btn:hover {
-      transform: scale(1.1);
-    }
-
-    /* Hidden menu */
-    .hidden-menu {
-      display: none;
-      position: fixed;
-      bottom: 70px;
-      right: 20px;
-      background: rgba(0,0,0,0.8);
-      border-radius: 12px;
-      padding: 15px;
-      text-align: left;
-    }
-
-    .hidden-menu a {
-      display: block;
-      color: #fff;
-      padding: 8px 0;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    .hidden-menu a:hover {
-      color: #ffcc00;
+      color: #444;
+      margin-top: auto;
     }
   </style>
 </head>
 <body>
+  <!-- Corner menu button -->
+  <button class="menu-btn" onclick="toggleMenu()">☰</button>
+  <div class="menu" id="menu">
+    <a href="#about">About Me</a>
+    <a href="#business">My Business</a>
+    <a href="#passion">Passion Projects</a>
+    <a href="#contact">Contact</a>
+  </div>
 
-  <header>🌿 Welcome to my Space!</header>
+  <header>
+    <img src="A_professional_digital_portrait_photograph_feature.png" alt="Steff">
+    <h1>Hello, I'm Steff</h1>
+    <p>Executive VA | Businesswoman | Creator</p>
+  </header>
 
-  <section id="about">
+  <div class="content" id="about">
     <h2>About Me</h2>
-    <p>Hello 👋, I’m <b>Steff</b>. This is my masterpiece website, built with creativity, passion, and positivity.  
-    I believe in making tools and systems that help people, while also sharing joy and inspiration 🌸.</p>
-  </section>
+    <p>Hi 👋 I’m Steff, a passionate individual who loves creating meaningful work, balancing professionalism with creativity. This page is where I share my journey and the things I love.</p>
+  </div>
 
-  <section id="business">
-    <h2>Our Business</h2>
-    <p>We versatile professional who provides remote administrative support and helps business operations for companies, entrepreneurs, and small business owners to ensure tasks are efficiently managed while saving valuable time and resources. This role is valuable in today's high tech's world where businesses need flexible and cost-effective solutions to keep operations running smoothly...We specialize in Tracking and Monitoring Company's Business, Payroll Systems and many more!!!. We do what you asked for!, and lets do this together....  
-    Our goal is to EMPOWER everyone, create EFFICIENCY, and build TRUST.</p>
-  </section>
+  <div class="content" id="business">
+    <h2>My Business</h2>
+    <p>Welcome to my business space 🌱. Here, I focus on helping clients grow through efficiency, creativity, and dedication. Soon, you’ll find access to my dashboards and tools.</p>
+  </div>
 
-  <section id="passion">
-    <h2>Passions</h2>
-    <p>I am passionate about growth 🌱, creativity 🎨, and positivity ☀️.  
-    This website is not just technology, it’s a journey of learning and sharing 💖.</p>
-  </section>
+  <div class="content" id="passion">
+    <h2>Passion Projects</h2>
+    <p>I enjoy exploring new skills, learning continuously, and creating projects that inspire positivity and growth. ✨</p>
+  </div>
+
+  <div class="content" id="contact">
+    <h2>Contact</h2>
+    <p>Email me at: <b>stephanyhingpittheexecutiveva@gmail.com</b></p>
+  </div>
 
   <footer>
-    © 2025 SMVH Masterpiece | Built with ❤️ by Steff
+    <p>© 2025 Steff's Masterpiece | Built with ❤️ and creativity</p>
   </footer>
-
-  <!-- Secret Button -->
-  <button class="secret-btn" onclick="toggleMenu()">🔑</button>
-
-  <!-- Hidden Menu -->
-  <div class="hidden-menu" id="menu">
-    <a href="https://script.google.com/macros/s/AKfycbxO3gp9zCAbeCrvrfAPjKZ1xWl4_RkRPDg1dDmTYStP/dev">🔑 COS Dashboard</a>
-    <a href="https://script.google.com/macros/s/AKfycbwoYoWw_ENZyzRl-rNdnjrVqLaWRUqrHSBehyeihws/dev">📊 ML Business</a>
-    <a href="YOUR_COMBEN_URL">📂 Com&Ben Dashboard</a>
-  </div>
 
   <script>
     function toggleMenu() {
       const menu = document.getElementById("menu");
-      menu.style.display = menu.style.display === "block" ? "none" : "block";
+      menu.style.display = menu.style.display === "flex" ? "none" : "flex";
     }
   </script>
-
 </body>
 </html>
-
-
-
