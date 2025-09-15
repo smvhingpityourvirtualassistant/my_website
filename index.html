@@ -3,171 +3,167 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Steff's Masterpiece</title>
+  <title>Steff | Masterpiece Website</title>
   <style>
     body {
       margin: 0;
-      font-family: "Segoe UI", Arial, sans-serif;
-      color: #333;
+      font-family: Arial, sans-serif;
     }
 
-    /* Navigation Bar */
+    /* NAVBAR */
     nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(51, 51, 51, 0.85);
+      padding: 15px 40px;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 20px 50px;
-      position: absolute;
-      width: 100%;
-      top: 0;
-      left: 0;
       z-index: 1000;
     }
 
     nav .logo {
-      font-size: 20px;
-      font-weight: bold;
-      letter-spacing: 2px;
       color: white;
+      font-weight: bold;
+      font-size: 1.5rem;
+      text-decoration: none;
     }
 
     nav ul {
       list-style: none;
-      display: flex;
-      gap: 25px;
       margin: 0;
       padding: 0;
+      display: flex;
+      align-items: center;
+    }
+
+    nav ul li {
+      position: relative;
     }
 
     nav ul li a {
-      text-decoration: none;
-      font-size: 14px;
       color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
       transition: color 0.3s;
     }
 
     nav ul li a:hover {
-      color: #ffd6d6;
+      color: #ffcc00;
     }
 
-    /* Hero Section */
-   .hero {
+    /* DROPDOWN */
+    nav ul li ul {
+      display: none;
+      position: absolute;
+      background: rgba(51, 51, 51, 0.95);
+      top: 40px;
+      left: 0;
+      list-style: none;
+      padding: 10px 0;
+      border-radius: 5px;
+      min-width: 200px;
+    }
+
+    nav ul li:hover ul {
+      display: block;
+    }
+
+    nav ul li ul li {
+      padding: 10px 20px;
+    }
+
+    nav ul li ul li a {
+      margin: 0;
+      display: block;
+    }
+
+    /* HERO */
+    .hero {
+      height: 100vh;
+      background: 
+        linear-gradient(135deg, rgba(168, 237, 234, 0.7), rgba(254, 214, 227, 0.7)),
+        url("e77c4816-7fb3-4145-8d86-578e1cb75933.png") no-repeat center center/cover;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 0 20px;
+      color: white;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      margin-bottom: 30px;
+    }
+
+    .btn {
+      background: black;
+      color: white;
+      padding: 12px 25px;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+
+    .btn:hover {
+      background: #ffcc00;
+      color: black;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVIGATION -->
+  <nav>
+    <a href="#" class="logo">STEFF</a>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#portfolio">Portfolio</a></li>
+      <li>
+        <a href="#">Pages ▾</a>
+        <ul>
+          <li><a href="YOUR_COS_DASHBOARD_LINK" target="_blank">COS Dashboard</a></li>
+          <li><a href="YOUR_MLBUSINESS_LINK" target="_blank">ML Business</a></li>
+          <li><a href="YOUR_PAYROLL_LINK" target="_blank">Payroll Management</a></li>
+        </ul>
+      </li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO SECTION -->
+  <section class="hero" id="home">
+  <h1>Welcome to my masterpiece!</h1>
+  <p>Beautiful space to share my story, my business, and the passions I care about most.</p>
+  <a href="#about" class="btn">DISCOVER MORE</a>
+</section>
+
+<style>
+.hero {
   height: 100vh;
   background: 
-    linear-gradient(135deg, rgba(168, 237, 234, 0.7), rgba(254, 214, 227, 0.7)),
-    url("e77c4816-7fb3-4145-8d86-578e1cb75933.png") no-repeat center center/cover;
+    linear-gradient(135deg, rgba(0,0,0,0.4), rgba(0,0,0,0.4)), 
+    url("https://drive.google.com/uc?export=view&id=1FwvZoSS7ZdZN1nfq98ZPjaKWfkO7V1jM") no-repeat center center/cover;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
   padding: 0 20px;
+  color: white;
 }
+</style>
 
-
-    .hero h1 {
-      font-size: 4rem;
-      font-weight: bold;
-      margin: 10px 0;
-      color: #fff;
-    }
-
-    .hero p {
-      font-size: 1.2rem;
-      color: #fff;
-      max-width: 600px;
-    }
-
-    .hero button {
-      margin-top: 20px;
-      padding: 14px 30px;
-      font-size: 14px;
-      font-weight: bold;
-      border: none;
-      border-radius: 4px;
-      background: #222;
-      color: #fff;
-      cursor: pointer;
-      transition: background 0.3s;
-    }
-
-    .hero button:hover {
-      background: #444;
-    }
-
-    /* Content Section */
-    .section {
-      padding: 60px 20px;
-      text-align: center;
-      background: #f9f9f9;
-    }
-
-    .section h2 {
-      font-size: 2rem;
-      margin-bottom: 15px;
-    }
-
-    .section p {
-      max-width: 700px;
-      margin: 0 auto;
-      font-size: 1rem;
-      color: #555;
-    }
-
-    footer {
-      text-align: center;
-      padding: 20px;
-      font-size: 0.9rem;
-      background: #f5f5f5;
-      color: #555;
-    }
-  </style>
-</head>
-<body>
-  <!-- Navigation -->
-  <nav>
-    <div class="logo">STEFF</div>
-    <ul>
-      <li><a href="#about">About</a></li>
-      <li><a href="#business">Business</a></li>
-      <li><a href="#passion">Passion</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
-
-  <!-- Hero Section -->
-  <div class="hero">
-    <h1>STEFF</h1>
-    <p>Beautiful space to share my story, my business, and the passions I care about most.</p>
-    <button onclick="document.getElementById('about').scrollIntoView({behavior:'smooth'})">
-      DISCOVER MORE
-    </button>
-  </div>
-
-  <!-- Sections -->
-  <div class="section" id="about">
-    <h2>About Me</h2>
-    <p>Hi 👋 I’m Steff, a passionate individual who loves creating meaningful work, balancing professionalism with creativity. This page is where I share my journey and the things I love.</p>
-  </div>
-
-  <div class="section" id="business" style="background:white;">
-    <h2>My Business</h2>
-    <p>Welcome to my business space 🌱. Here, I focus on helping clients grow through efficiency, creativity, and dedication. Soon, you’ll find access to my dashboards and tools.</p>
-  </div>
-
-  <div class="section" id="passion">
-    <h2>Passion Projects</h2>
-    <p>I enjoy exploring new skills, learning continuously, and creating projects that inspire positivity and growth. ✨</p>
-  </div>
-
-  <div class="section" id="contact" style="background:white;">
-    <h2>Contact</h2>
-    <p>Email me at: <b>stephanyhingpittheexecutiveva@gmail.com</b></p>
-  </div>
-
-  <footer>
-    <p>© 2025 Steff's Masterpiece | Built with ❤️</p>
-  </footer>
 </body>
 </html>
-
