@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Steff Website</title>
+  <title>SMVH Website</title>
   <style>
     /* Reset */
     * {
@@ -15,20 +15,29 @@
     body, html {
       height: 100%;
       font-family: Arial, sans-serif;
-      scroll-behavior: smooth;
     }
 
-    /* Background */
+    /* Hero with video background */
     .hero {
+      position: relative;
       height: 100vh;
-      background: url('1bwjrh2nN7Td9jRlogXabmeACDDectlH8.png') no-repeat center center/cover;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
       text-align: center;
       color: white;
-      position: relative;
+      overflow: hidden;
+    }
+
+    #bg-video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -1; /* behind content */
     }
 
     /* Dark overlay for readability */
@@ -40,12 +49,12 @@
       width: 100%;
       height: 100%;
       background: rgba(0,0,0,0.3);
-      z-index: 1;
+      z-index: 0;
     }
 
     .hero-content {
       position: relative;
-      z-index: 2;
+      z-index: 1;
     }
 
     .hero h1 {
@@ -142,15 +151,8 @@
       text-align: center;
     }
 
-    .section h2 {
-      font-size: 2rem;
-      margin-bottom: 1rem;
-    }
-
-    .section p {
-      font-size: 1.1rem;
-      max-width: 800px;
-      margin: auto;
+    .section:nth-child(even) {
+      background: #f9f9f9;
     }
   </style>
 </head>
@@ -158,10 +160,10 @@
 
   <!-- Navbar -->
   <nav>
-    <div class="logo">SMVH</div>
+    <div class="logo">SMVH | Webpage</div>
     <ul>
-      <li><a href="#home">Home</a></li>
-      <li><a href="#portfolio">Portfolio</a></li>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Portfolio</a></li>
       <li>
         <a href="#">Pages ▾</a>
         <ul>
@@ -170,13 +172,17 @@
           <li><a href="YOUR_PAYROLL_LINK" target="_blank">Payroll Management</a></li>
         </ul>
       </li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#contact">Contact</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Contact</a></li>
     </ul>
   </nav>
 
-  <!-- Hero Section -->
-  <section class="hero" id="home">
+  <!-- Hero Section with Video -->
+  <section class="hero">
+    <video autoplay muted loop id="bg-video">
+      <source src="https://drive.google.com/uc?export=download&id=1L_23OpNA2_iyaQraopQ-yUYuFOXKUJ73" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
     <div class="hero-content">
       <h1>Welcome to my masterpiece!</h1>
       <p>Beautiful space to share my story, my business, and the passions I care about most.</p>
@@ -190,9 +196,9 @@
     <p>Hi 👋 I’m Steff, a passionate individual who loves creating meaningful work, balancing professionalism with creativity. This page is where I share my journey and the things I love.</p>
   </div>
 
-  <div class="section" id="portfolio" style="background:white;">
+  <div class="section" id="business">
     <h2>My Business</h2>
-    <p>Welcome to my space 🌱. Here, I focus on helping clients grow through efficiency, creativity, and dedication. Soon, you’ll find access to my dashboards and tools.</p>
+    <p>Welcome to my business space 🌱. Here, I focus on helping clients grow through efficiency, creativity, and dedication. Soon, you’ll find access to my dashboards and tools.</p>
   </div>
 
   <div class="section" id="passion">
@@ -200,21 +206,13 @@
     <p>I enjoy exploring new skills, learning continuously, and creating projects that inspire positivity and growth. ✨</p>
   </div>
 
-  <div class="section" id="contact" style="background:white;">
+  <div class="section" id="contact">
     <h2>Contact</h2>
     <p>Email me at: <b>stephanyhingpittheexecutiveva@gmail.com</b></p>
   </div>
-
-<footer>
-    <p>© 2025 Steff's Masterpiece | Built with ❤️ and creativity</p>
+    
+    <footer>
+      <p>© 2025 Steff's Masterpiece | Built with ❤️</p>
   </footer>
-
-  <script>
-    function toggleMenu() {
-      const menu = document.getElementById("menu");
-      menu.style.display = menu.style.display === "flex" ? "none" : "flex";
-    }
-  </script>
 </body>
 </html>
-
